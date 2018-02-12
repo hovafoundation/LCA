@@ -1,8 +1,8 @@
 apply plugin: 'com.android.application'
-
 apply plugin: 'kotlin-android'
-
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'idea'
+apply plugin: 'io.fabric'
 
 android {
     compileSdkVersion 27
@@ -14,23 +14,98 @@ android {
         targetSdkVersion 27
         versionCode 1
         versionName "0.0.1"
+
+        multiDexEnabled true
+        vectorDrawables.useSupportLibrary = true
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = ["room.schemaLocation": "$projectDir/schemas".toString()]
+            }
+        }
     }
+
     buildTypes {
-        release {
+        debug {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            ext.enableCrashlytics = false
+            ext.alwaysUpdateBuildId = false
         }
+        release {
+            minifyEnabled true
+            //zipAlignEnabled true
+            //shrinkResources true
+            //debuggable false
+            //jniDebuggable false
+            //renderscriptDebuggable false
+            //pseudoLocalesEnabled false
+
+            //proguardFile 'proguard-joda-time.pro'
+            //proguardFile 'proguard-joda-time-android.pro'
+            //proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), "proguard-rules.pro"
+        }
+    }
+
+    dataBinding {
+        enabled = true
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
+    }
+
+    packagingOptions {
+        exclude 'META-INF/io.netty.versions.properties'
+        exclude 'META-INF/rxjava.properties'
+        exclude 'META-INF/INDEX.LIST'
+        exclude 'META-INF/DEPENDENCIES'
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    dexOptions {
+        //jumboMode = true
+        preDexLibraries true
+        maxProcessCount 8
+        // Instead of setting the heap size for the DEX process, increase Gradle's
+        // heap size to enable dex-in-process. To learm more, read the next section.
+        // javaMaxHeapSize "2048m"
+    }
+
+    aaptOptions {
+        cruncherEnabled false
     }
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation"org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
-    implementation 'com.android.support:appcompat-v7:27.0.2'
-    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
-    implementation 'com.android.support:design:27.0.2'
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+
+    implementation 'android.arch.persistence.room:runtime:1.0.0'
+    annotationProcessor "android.arch.persistence.room:compiler:1.0.0"
+    implementation('com.crashlytics.sdk.android:crashlytics:2.9.0@aar') {
+        transitive = true;
+    }
+    //api 'com.tencent.tinker:tinker-android-lib:1.9.0'
+    implementation project(':frame')
 }
+
+idea {
+    module {
+        downloadJavadoc = true
+    }
+}
+
+apply plugin: 'com.google.gms.google-services'

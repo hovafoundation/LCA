@@ -14,9 +14,9 @@ buildscript {
     dependencies {
         classpath 'com.android.tools.build:gradle:3.0.1'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
-        //classpath 'com.google.gms:google-services:3.1.1'
-        //classpath 'io.fabric.tools:gradle:1.24.4'
-        //classpath 'com.google.firebase:firebase-plugins:1.1.2'
+        classpath 'com.google.gms:google-services:3.2.0'
+        classpath 'io.fabric.tools:gradle:1.24.4'
+        classpath 'com.google.firebase:firebase-plugins:1.1.2'
         //classpath 'com.tencent.tinker:tinker-patch-gradle-plugin:1.9.0'
         //classpath "com.neenbedankt.gradle.plugins:android-apt:1.6"
         //classpath 'ru.vyarus:gradle-java-lib-plugin:1.0.5'
