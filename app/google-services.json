@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "604638536613",
+    "firebase_url": "https://live-coin-alert.firebaseio.com",
+    "project_id": "live-coin-alert",
+    "storage_bucket": "live-coin-alert.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:604638536613:android:da05b3fc0ce653da",
+        "android_client_info": {
+          "package_name": "com.livecoinalert.lca"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "604638536613-jgt2ub0umj8isf3fv5nsiq6n1eoqqsav.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCCftlInMPQ08Mqf4qr5ym8qKdctwc5Yz8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
