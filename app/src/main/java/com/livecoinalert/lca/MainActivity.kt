@@ -1,12 +1,13 @@
 package com.livecoinalert.lca
 
+import android.content.Intent
 import android.os.Bundle
 import android.support.design.widget.Snackbar
 import android.support.v7.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
-
 import kotlinx.android.synthetic.main.activity_main.*
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -33,6 +34,10 @@ class MainActivity : AppCompatActivity() {
         // as you specify a parent activity in AndroidManifest.xml.
         return when (item.itemId) {
             R.id.action_settings -> true
+            R.id.action_coin_detail -> {
+                this.startActivity(Intent(this, CoinDetailActivity::class.java))
+                true
+            }
             else -> super.onOptionsItemSelected(item)
         }
     }
