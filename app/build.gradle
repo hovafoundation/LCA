@@ -101,7 +101,8 @@ dependencies {
         transitive = true;
     }*/
     //api 'com.tencent.tinker:tinker-android-lib:1.9.0'
-    implementation project(':frame')
+    //implementation project(':frame')
+    implementation 'com.dreampany.framework:frame:0.0.7'
 }
 
 idea {
