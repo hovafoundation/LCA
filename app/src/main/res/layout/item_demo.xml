@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:auto="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="${relativePackage}.${activityClass}">
+
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        auto:cardCornerRadius="3dp"
+        auto:cardElevation="3dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/layoutWord"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:paddingBottom="8dp"
+                android:paddingEnd="8dp"
+                android:paddingStart="10dp"
+                android:paddingTop="8dp">
+
+                <fr.arnaudguyon.smartfontslib.FontTextView
+                    android:id="@+id/viewWord"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Abacus"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="18sp"
+                    auto:smart_font="@string/fontRobotoSlabTitle" />
+
+                <fr.arnaudguyon.smartfontslib.FontTextView
+                    android:id="@+id/viewPartOfSpeech"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="Noun"
+                    android:textColor="@color/grey_900"
+                    android:textSize="14sp"
+                    auto:smart_font="@string/fontRobotoSlabBody" />
+
+
+            </LinearLayout>
+
+             <RelativeLayout
+                 android:layout_width="wrap_content"
+                 android:layout_height="match_parent"
+                 android:paddingBottom="10dp"
+                 android:paddingTop="10dp"
+                 android:visibility="visible">
+
+<!--                 <com.beardedhen.androidbootstrap.BootstrapLabel
+                     android:id="@+id/viewLabel"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_marginEnd="15dp"
+                     android:text="New"
+                     android:visibility="gone"
+                     auto:bootstrapBrand="danger" />-->
+
+                 <ImageView
+                     android:id="@+id/imageSelection"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_alignParentTop="true"
+                     android:layout_centerHorizontal="true"
+                     android:layout_marginEnd="15dp"
+                     android:visibility="gone"
+                     auto:srcCompat="@drawable/ic_check_circle_accent_24dp"
+                     tools:visibility="visible" />
+
+             </RelativeLayout>
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+</layout>

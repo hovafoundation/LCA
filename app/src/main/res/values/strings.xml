@@ -1,5 +1,7 @@
 <resources>
-    <string name="app_name">LCA</string>
-    <string name="action_settings">Settings</string>
-    <string name="coin_detail">Coin Detail Page</string>
+    <string name="app_name">Demo</string>
+    <string name="app_description">
+        Demo description
+    </string>
+
 </resources>

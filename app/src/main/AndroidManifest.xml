@@ -1,25 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.livecoinalert.lca">
+    package="com.livecoinalert.lca"
+    android:installLocation="auto">
+
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
 
     <application
+        android:name="com.livecoinalert.lca.app.App"
         android:allowBackup="true"
+        android:fullBackupContent="false"
+        android:hardwareAccelerated="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:largeHeap="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme.App">
+
+<!--        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="44aff980a5246897e9776e2bb83ef822b80afbfa" />-->
+
         <activity
-            android:name=".MainActivity"
-            android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:name="com.livecoinalert.lca.ui.activity.NavigationActivity"
+            android:configChanges="orientation|screenSize|keyboard|keyboardHidden"
+            android:label=""
+            android:launchMode="singleTask">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <activity android:name=".CoinDetailActivity"></activity>
-    </application>
 
+        </activity>
+
+
+    </application>
 </manifest>

@@ -2,7 +2,8 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'idea'
-//apply plugin: 'io.fabric'
+apply plugin: 'io.fabric'
+//apply plugin: 'com.tencent.tinker.patch'
 
 android {
     compileSdkVersion 27
@@ -41,6 +42,7 @@ android {
             //jniDebuggable false
             //renderscriptDebuggable false
             //pseudoLocalesEnabled false
+
 
             //proguardFile 'proguard-joda-time.pro'
             //proguardFile 'proguard-joda-time-android.pro'
@@ -87,21 +89,20 @@ android {
 }
 
 dependencies {
-    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
-    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
-    implementation 'com.github.PhilJay:MPAndroidChart:v3.0.3'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
 
-    implementation 'android.arch.persistence.room:runtime:1.0.0'
+    implementation "android.arch.persistence.room:runtime:1.0.0"
     annotationProcessor "android.arch.persistence.room:compiler:1.0.0"
-/*    implementation('com.crashlytics.sdk.android:crashlytics:2.9.0@aar') {
+
+    implementation('com.crashlytics.sdk.android:crashlytics:2.9.0@aar') {
         transitive = true;
-    }*/
+    }
+
     //api 'com.tencent.tinker:tinker-android-lib:1.9.0'
-    //implementation project(':frame')
     implementation 'com.dreampany.framework:frame:0.0.7'
 }
 

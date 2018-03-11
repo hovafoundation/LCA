@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="title_first_tour">Explore &amp; Discover</string>
+    <string name="title_second_tour">Search &amp; Convert</string>
+    <string name="title_third_tour">Categories &amp; Favourite</string>
+
+    <string name="description_first_tour">New words from Word of the Day, Quotation, Image and Camera</string>
+    <string name="description_second_tour">Find any words or convert using OCR engine with translation</string>
+    <string name="description_third_tour">Categorised list of words and favourite option for important words</string>
+
+</resources>
