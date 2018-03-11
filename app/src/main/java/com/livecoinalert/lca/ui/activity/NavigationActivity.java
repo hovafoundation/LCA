@@ -44,7 +44,7 @@ public class NavigationActivity extends BaseBottomNavigationActivity {
         boolean touring = checkTour();
         if (!touring) {
             setSelectedItem(R.id.item_home);
-            AdManager.onInstance(getContext()).loadBanner(ViewUtil.getViewById(this, R.id.adView));
+            //AdManager.onInstance(getContext()).loadBanner(ViewUtil.getViewById(this, R.id.adView));
         }
     }
 

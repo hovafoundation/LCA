@@ -3,8 +3,6 @@ package com.livecoinalert.lca.app;
 import android.app.Activity;
 import android.widget.Toast;
 
-import com.crashlytics.android.Crashlytics;
-import com.crashlytics.android.core.CrashlyticsCore;
 import com.dreampany.framework.app.BaseApp;
 import com.dreampany.framework.data.api.network.data.model.NetworkEvent;
 import com.dreampany.framework.data.event.NotifyEvent;
@@ -24,7 +22,6 @@ import com.muddzdev.styleabletoastlibrary.StyleableToast;
 import org.greenrobot.eventbus.Subscribe;
 import org.greenrobot.eventbus.ThreadMode;
 
-import io.fabric.sdk.android.Fabric;
 
 
 /**
@@ -40,13 +37,13 @@ public class App extends BaseApp {
         //setupLeakCanary();
 
         FirebaseApp.initializeApp(context);
-        MobileAds.initialize(context, TextUtil.getString(context, R.string.admob_app_id));
+        //MobileAds.initialize(context, TextUtil.getString(context, R.string.admob_app_id));
 
-        Crashlytics crashlyticsKit = new Crashlytics.Builder()
+/*        Crashlytics crashlyticsKit = new Crashlytics.Builder()
                 .core(new CrashlyticsCore.Builder().disabled(BuildConfig.DEBUG).build())
                 .build();
 
-        Fabric.with(context, crashlyticsKit);
+        Fabric.with(context, crashlyticsKit);*/
 
         // Initialize the Branch object
         // Branch.getAutoInstance(this);
