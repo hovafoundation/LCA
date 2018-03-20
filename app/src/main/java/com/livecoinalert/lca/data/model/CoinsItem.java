@@ -1,3 +1,4 @@
+/*
 package com.livecoinalert.lca.data.model;
 
 import android.support.annotation.NonNull;
@@ -16,9 +17,11 @@ import eu.davidea.flexibleadapter.FlexibleAdapter;
 import eu.davidea.flexibleadapter.items.IFlexible;
 import eu.davidea.viewholders.FlexibleViewHolder;
 
+*/
 /**
  * Created by suneel on 3/18/2018.
- */
+ *//*
+
 
 public class CoinsItem extends BaseItem<CoinsItem.ViewHolder> implements IFlexible<CoinsItem.ViewHolder>, Comparable<CoinsItem>
 {
@@ -68,3 +71,4 @@ public class CoinsItem extends BaseItem<CoinsItem.ViewHolder> implements IFlexib
         }
     }
 }
+*/

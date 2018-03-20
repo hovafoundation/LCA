@@ -23,14 +23,14 @@
                 android:paddingTop="10dp"
                 android:visibility="visible">
 
-                <!--                 <com.beardedhen.androidbootstrap.BootstrapLabel
+                                 <com.beardedhen.androidbootstrap.BootstrapLabel
                                      android:id="@+id/viewLabel"
                                      android:layout_width="wrap_content"
                                      android:layout_height="wrap_content"
                                      android:layout_marginEnd="15dp"
                                      android:text="New"
                                      android:visibility="gone"
-                                     auto:bootstrapBrand="danger" />-->
+                                     auto:bootstrapBrand="danger" />
 
                 <ImageView
                     android:id="@+id/imageSelection"
