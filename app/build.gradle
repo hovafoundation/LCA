@@ -43,7 +43,6 @@ android {
             //renderscriptDebuggable false
             //pseudoLocalesEnabled false
 
-
             //proguardFile 'proguard-joda-time.pro'
             //proguardFile 'proguard-joda-time-android.pro'
             //proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
@@ -91,6 +90,7 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+    implementation 'com.android.support:support-v4:27.1.0'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
