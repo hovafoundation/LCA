@@ -12,25 +12,77 @@
         android:layout_height="0dp"
         android:layout_weight="3"
         android:orientation="vertical"
-        android:background="@color/blue_900">
-        <TextView
+        android:background="@color/colorDeepPurple700">
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:textStyle="bold"
-            android:layout_weight="2"
-            android:textColor="@color/white"
-            android:gravity="center"
-            android:textSize="25dp"
-            android:text="$334.82B" />
+            android:layout_gravity="center"
+            android:layout_weight="2.5"
+            android:gravity="center">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:id="@+id/mainHeader"
+                android:gravity="center"
+                android:textSize="25dp"
+                android:padding="5dp"
+                android:text="$334.82B" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:text="24h:$3"
-            />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:textSize="15dp"
+                android:padding="5dp"
+                android:layout_below="@+id/mainHeader"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/colorLoginScreen"
+                android:text="24h:$3.07B (0.93%)"
+                />
 
+        </RelativeLayout>
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="0dp"
+           android:layout_weight="1"
+           android:orientation="horizontal"
+           android:weightSum="3"
+           android:background="@color/colorDeepPurple900"
+           >
+           <TextView
+               android:layout_width="0dp"
+               android:layout_weight="1"
+               android:layout_height="match_parent"
+               android:textColor="@color/white"
+               android:padding="2dp"
+               android:textSize="15dp"
+               android:text="Cryptocurrency"
+               android:gravity="center"
+               android:layout_margin="1dp"/>
+           <TextView
+               android:layout_width="0dp"
+               android:layout_weight="1"
+               android:layout_height="match_parent"
+               android:textColor="@color/white"
+               android:padding="2dp"
+               android:text="Market Cap"
+               android:gravity="center"
+               android:textSize="15dp"
+               android:layout_margin="1dp"/>
+           <TextView
+               android:layout_width="0dp"
+               android:layout_weight="1"
+               android:layout_height="match_parent"
+               android:textColor="@color/white"
+               android:padding="2dp"
+               android:text="Price"
+               android:textSize="15dp"
+               android:gravity="center"
+               android:layout_margin="1dp"/>
+       </LinearLayout>
     </LinearLayout>
 
 </LinearLayout>
