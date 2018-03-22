@@ -2,11 +2,12 @@ package com.livecoinalert.lca.ui.activity;
 
 import android.os.Bundle;
 
+import com.livecoinalert.lca.R;
 import com.livecoinalert.lca.databinding.ActivityLaunchBinding;
 import com.dreampany.framework.data.util.AndroidUtil;
 import com.dreampany.framework.ui.activity.BaseActivity;
 import com.dynamitechetan.flowinggradient.FlowingGradientClass;
-import com.livecoinalert.lca.R;
+
 
 /**
  * Created by air on 9/17/17.

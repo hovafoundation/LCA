@@ -1,7 +1,15 @@
 package com.livecoinalert.lca.ui.activity;
 
 import android.content.Intent;
+import android.content.res.ColorStateList;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
+import android.graphics.drawable.Drawable;
+import android.os.Build;
 import android.os.Bundle;
+import android.support.annotation.RequiresApi;
+import android.support.design.widget.BottomNavigationView;
+import android.support.v7.widget.Toolbar;
 
 import com.livecoinalert.lca.R;
 import com.livecoinalert.lca.ui.fragment.MoreFragment;
@@ -116,5 +124,37 @@ public class NavigationActivity extends BaseBottomNavigationActivity {
 
     public void goLibrary() {
         //setSelectedItem(R.id.item_library);
+    }
+
+    // Kushal ---
+
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        Toolbar tool= findViewById(getToolbarId());
+        BottomNavigationView nav= findViewById(R.id.navigationView);
+        nav.setBackground(tool.getBackground());
+        int[][] states = new int[][] {
+                /*new int[] { android.R.attr.state_enabled}, // enabled
+                new int[] {-android.R.attr.state_enabled},*/ // disabled
+                new int[] {android.R.attr.state_checked}, // unchecked
+                new int[] {-android.R.attr.state_checked}  // pressed
+        };
+
+        int[] colors = new int[] {
+            /*    getWindow().getStatusBarColor(),
+                Color.WHITE*/
+                Color.WHITE,
+                getWindow().getStatusBarColor()
+        };
+        ColorStateList myList = new ColorStateList(states, colors);
+        nav.setItemIconTintList(myList);
+        nav.setItemTextColor(myList);
+        Drawable background = tool.getBackground();
+        int color = ((ColorDrawable) background).getColor();
+        if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            getWindow().setNavigationBarColor(color);
+        }
     }
 }

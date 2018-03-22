@@ -16,6 +16,7 @@ import com.facebook.imagepipeline.core.ImagePipelineConfig;
 import com.google.android.gms.ads.MobileAds;
 import com.google.firebase.FirebaseApp;
 import com.livecoinalert.lca.BuildConfig;
+
 import com.livecoinalert.lca.R;
 import com.muddzdev.styleabletoastlibrary.StyleableToast;
 
