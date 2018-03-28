@@ -7,9 +7,9 @@
         android:icon="@drawable/ic_home_black_24dp"
         android:title="@string/title_home" />
 
-    <item
+   <!-- <item
         android:icon="@drawable/ic_home_black_24dp"
-        android:title="@string/title_home" />
+        android:title="@string/title_home" />-->
 
 <!--    <item
         android:icon="@drawable/ic_home_black_24dp"
@@ -36,10 +36,10 @@
         android:icon="@drawable/ic_view_list_black_24dp"
         android:title="@string/title_library" />-->
 
-<!--    <item
+    <item
         android:id="@+id/item_status"
         android:icon="@drawable/ic_ev_station_black_24dp"
-        android:title="@string/title_status" />-->
+        android:title="@string/title_status" />
 
     <item
         android:id="@+id/item_more"

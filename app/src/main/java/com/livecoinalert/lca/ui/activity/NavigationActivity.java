@@ -12,6 +12,7 @@ import android.support.design.widget.BottomNavigationView;
 import android.support.v7.widget.Toolbar;
 
 import com.livecoinalert.lca.R;
+import com.livecoinalert.lca.ui.fragment.ChartFragment;
 import com.livecoinalert.lca.ui.fragment.MoreFragment;
 import com.dreampany.framework.data.manager.AdManager;
 import com.dreampany.framework.data.util.ViewUtil;
@@ -67,6 +68,9 @@ public class NavigationActivity extends BaseBottomNavigationActivity {
         switch (navItemId) {
             case R.id.item_home:
                 commitFragment(HomeFragment.class, R.id.layout);
+                break;
+            case R.id.item_status:
+                commitFragment(ChartFragment.class, R.id.layout);
                 break;
 /*            case R.id.item_coins:
                 commitFragment(CoinsFragment.class, R.id.layout);

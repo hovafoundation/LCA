@@ -22,7 +22,7 @@
             android:value="44aff980a5246897e9776e2bb83ef822b80afbfa" />-->
 
         <activity
-            android:name="com.livecoinalert.lca.ui.activity.NavigationActivity"
+            android:name=".ui.activity.LaunchActivity"
             android:configChanges="orientation|screenSize|keyboard|keyboardHidden"
             android:label=""
             android:launchMode="singleTask">
@@ -34,7 +34,11 @@
             </intent-filter>
 
         </activity>
-
+        <activity
+            android:name="com.livecoinalert.lca.ui.activity.NavigationActivity"
+            android:configChanges="orientation|screenSize|keyboard|keyboardHidden"
+            android:label=""
+            android:launchMode="singleTask"/>
 
     </application>
 </manifest>
